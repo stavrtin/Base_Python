@@ -14,12 +14,12 @@ class Stationery:
         self.title = title
 
     def draw(self):
-        return f'Запуск отрисовки'
+        return f'Запуск отрисовки {self.title}'
 
 
 class Pen(Stationery):
     def draw(self):
-        return f'Запуск отрисовки РУЧКОЙ'
+        return f'Запуск отрисовки РУЧКОЙ  {self.title}'
 
 
 class Pencil(Stationery):
