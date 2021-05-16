@@ -1,4 +1,4 @@
-'''1. Реализовать класс «Дата», функция-конструктор которого должна принимать дату
+'''1.1 Реализовать класс «Дата», функция-конструктор которого должна принимать дату
 в виде строки формата «день-месяц-год».
 В рамках класса реализовать два метода.
 Первый, с декоратором @classmethod, должен извлекать число, месяц, год и преобразовывать их тип к типу «Число».
@@ -16,7 +16,9 @@ class Date:
 
     @classmethod
     def get_number(cls, date_list):
-        return [int(item) for item in date_list.split('-')]
+        date = cls.do_validation(date_list)
+        return date
+            # [int(item) for item in date_list.split('-')]
 
     @staticmethod
     def do_validation(date_list):
@@ -32,7 +34,7 @@ class Date:
                     date_list = input('Введите дату в формате: дд-мм-год => ')
                     d_list = [int(i) for i in date_list.split('-')]
                 else:
-                        return 'Все верно введено'
+                        return f'Все верно введено '
         except ValueError:
             return 'Дата введена не в числовом формате\n' \
                    'повторите ввод =>  '
@@ -40,6 +42,4 @@ class Date:
 
 test_date = input('Введите дату в формате: дд-мм-год => ')
 my_date = Date(test_date)
-print(my_date.do_validation(test_date))
 print(my_date.get_number(test_date))
-
