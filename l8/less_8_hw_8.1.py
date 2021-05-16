@@ -37,23 +37,6 @@ class Date:
             return 'Дата введена не в числовом формате\n' \
                    'повторите ввод =>  '
 
-    # def do_validation(self):
-    #     try:
-    #         d_list = [int(i) for i in self.date_list.split('-')]
-    #         while True:
-    #             if d_list[0] < 0 or d_list[0] > 31:
-    #                 print('Дата введена не верно. Повтори ввод')
-    #                 self.date_list = input('Введите дату в формате: дд-мм-год => ')
-    #                 d_list = [int(i) for i in self.date_list.split('-')]
-    #             if d_list[1] < 0 or d_list[1] > 12:
-    #                 print('Месяц введен не верно')
-    #                 self.date_list = input('Введите дату в формате: дд-мм-год => ')
-    #                 d_list = [int(i) for i in self.date_list.split('-')]
-    #             else:
-    #                     return 'Все верно введено'
-    #     except ValueError:
-    #         return 'Дата введена не в числовом формате\n' \
-    #                'повторите ввод =>  '
 
 test_date = input('Введите дату в формате: дд-мм-год => ')
 my_date = Date(test_date)
